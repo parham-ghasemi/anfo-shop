@@ -458,7 +458,7 @@ function MainSection() {
     <section className="main-clothes mt-3">
       <div className="row w-100">
         <div className="col-lg-2 sideMenu d-none d-lg-block ps-4">
-          <div className="title-sidenav mt-2 ps-3 category__nav">
+          {/* <div className="title-sidenav mt-2 ps-3 category__nav">
             <h5>پوشاک</h5>
             <ul className="clothes-type">
               <li>
@@ -517,10 +517,113 @@ function MainSection() {
                 </a>
               </li>
             </ul>
+          </div> */}
+          <div className="title-sidenav mt-2">
+            <h5>برند</h5>
+            <form className="brand-filter-container">
+              <div>
+                <input
+                  type="checkbox"
+                  id="checkbox4"
+                  name="checkbox4"
+                  defaultValue="checkbox4"
+                  onChange={() => ChangeBrandFilter("chanel")}
+                />
+                <label htmlFor="checkbox4">Chanel</label>
+              </div>
+
+              <div>
+                <input
+                  type="checkbox"
+                  id="checkbox5"
+                  name="checkbox5"
+                  defaultValue="checkbox5"
+                  onChange={() => ChangeBrandFilter("prada")}
+                />
+                <label htmlFor="checkbox5">Prada</label>
+              </div>
+
+              <div>
+                <input
+                  type="checkbox"
+                  id="checkbox6"
+                  name="checkbox6"
+                  defaultValue="checkbox6"
+                  onChange={() => ChangeBrandFilter("gucci")}
+                />
+                <label htmlFor="checkbox6">Gucci</label>
+              </div>
+
+              <div>
+                <input
+                  type="checkbox"
+                  id="checkbox7"
+                  name="checkbox7"
+                  defaultValue="checkbox7"
+                  onChange={() => ChangeBrandFilter("burberry")}
+                />
+                <label htmlFor="checkbox7">Burberry</label>
+              </div>
+
+              <div>
+                <input
+                  type="checkbox"
+                  id="checkbox8"
+                  name="checkbox8"
+                  defaultValue="checkbox8"
+                  onChange={() => ChangeBrandFilter("nike")}
+                />
+                <label htmlFor="checkbox8">Nike</label>
+              </div>
+
+              <div>
+                <input
+                  type="checkbox"
+                  id="checkbox9"
+                  name="checkbox9"
+                  defaultValue="checkbox9"
+                  onChange={() => ChangeBrandFilter("adidas")}
+                />
+                <label htmlFor="checkbox9">Adidas</label>
+              </div>
+
+              <div>
+                <input
+                  type="checkbox"
+                  id="checkbox10"
+                  name="checkbox10"
+                  defaultValue="checkbox10"
+                  onChange={() => ChangeBrandFilter("calvin klein")}
+                />
+                <label htmlFor="checkbox10">Calvin Klein</label>
+              </div>
+
+              <div>
+                <input
+                  type="checkbox"
+                  id="checkbox11"
+                  name="checkbox11"
+                  defaultValue="checkbox11"
+                  onChange={() => ChangeBrandFilter("louis vuitton")}
+                />
+                <label htmlFor="checkbox11">Louis Vuitton</label>
+              </div>
+
+              <div>
+                <input
+                  type="checkbox"
+                  id="checkbox12"
+                  name="checkbox12"
+                  defaultValue="checkbox12"
+                  onChange={() => ChangeBrandFilter("ralph lauren")}
+                />
+                <label htmlFor="checkbox12">Ralph Lauren</label>
+              </div>
+            </form>
           </div>
-          <div className="title-sidenav star-sidenav mt-2">
+          <div className="title-sidenav star-sidenav mt-3">
             <h5>نظرات مشتریان</h5>
-            <ul>
+            <ul className="starfilter-container">
               <li onClick={() => changeRatingFilter(4)}>
                 <a href="#" data-target="4_star">
                   <i className="bi bi-star-fill" />
@@ -563,94 +666,9 @@ function MainSection() {
               </li>
             </ul>
           </div>
-          <div className="title-sidenav mt-2">
-            <h5>برند</h5>
-            <form>
-              <input
-                type="checkbox"
-                id="checkbox4"
-                name="checkbox4"
-                defaultValue="checkbox4"
-                onChange={() => ChangeBrandFilter("chanel")}
-              />
-              <label htmlFor="checkbox4">Chanel</label>
-              <br />
-              <input
-                type="checkbox"
-                id="checkbox5"
-                name="checkbox5"
-                defaultValue="checkbox5"
-                onChange={() => ChangeBrandFilter("prada")}
-              />
-              <label htmlFor="checkbox5">Prada</label>
-              <br />
-              <input
-                type="checkbox"
-                id="checkbox6"
-                name="checkbox6"
-                defaultValue="checkbox6"
-                onChange={() => ChangeBrandFilter("gucci")}
-              />
-              <label htmlFor="checkbox6">Gucci</label>
-              <br />
-              <input
-                type="checkbox"
-                id="checkbox7"
-                name="checkbox7"
-                defaultValue="checkbox7"
-                onChange={() => ChangeBrandFilter("burberry")}
-              />
-              <label htmlFor="checkbox7">Burberry</label>
-              <br />
-              <input
-                type="checkbox"
-                id="checkbox8"
-                name="checkbox8"
-                defaultValue="checkbox8"
-                onChange={() => ChangeBrandFilter("nike")}
-              />
-              <label htmlFor="checkbox8">Nike</label>
-              <br />
-              <input
-                type="checkbox"
-                id="checkbox9"
-                name="checkbox9"
-                defaultValue="checkbox9"
-                onChange={() => ChangeBrandFilter("adidas")}
-              />
-              <label htmlFor="checkbox9">Adidas</label>
-              <br />
-              <input
-                type="checkbox"
-                id="checkbox10"
-                name="checkbox10"
-                defaultValue="checkbox10"
-                onChange={() => ChangeBrandFilter("calvin klein")}
-              />
-              <label htmlFor="checkbox10">Calvin Klein</label>
-              <br />
-              <input
-                type="checkbox"
-                id="checkbox11"
-                name="checkbox11"
-                defaultValue="checkbox11"
-                onChange={() => ChangeBrandFilter("louis vuitton")}
-              />
-              <label htmlFor="checkbox11">Louis Vuitton</label>
-              <br />
-              <input
-                type="checkbox"
-                id="checkbox12"
-                name="checkbox12"
-                defaultValue="checkbox12"
-                onChange={() => ChangeBrandFilter("ralph lauren")}
-              />
-              <label htmlFor="checkbox12">Ralph Lauren</label>
-            </form>
-          </div>
           <div className="title-sidenav mt-3">
             <h5>قیمت ها</h5>
-            <ul>
+            <ul className="price-filter-container">
               <li onClick={() => changePriceFilter(0, 25)}>
                 <a href="#">تا 25$</a>
               </li>
@@ -666,15 +684,17 @@ function MainSection() {
               <li onClick={() => changePriceFilter(200, null)}>
                 <a href="#">از 200$ به بالا</a>
               </li>
-              <li className="d-inline-block">
-                <input type="text" placeholder="حداقل" onChange={(num) => setCustomPriceFilter({ ...customPriceFilter, min: num.target.value })} />
-              </li>
-              <li className="d-inline-block">
-                <input type="text" placeholder="حداکثر" onChange={(input) => setCustomPriceFilter({ ...customPriceFilter, max: input.target.value })} />
-              </li>
-              <li className="d-inline-block">
-                <button onClick={() => setPriceFilter(customPriceFilter)}>تایید</button>
-              </li>
+              <div>
+                <li className="d-inline-block">
+                  <input type="text" placeholder="حداقل" onChange={(num) => setCustomPriceFilter({ ...customPriceFilter, min: num.target.value })} />
+                </li>
+                <li className="d-inline-block">
+                  <input type="text" placeholder="حداکثر" onChange={(input) => setCustomPriceFilter({ ...customPriceFilter, max: input.target.value })} />
+                </li>
+                <li className="d-inline-block">
+                  <button onClick={() => setPriceFilter(customPriceFilter)}>تایید</button>
+                </li>
+              </div>
             </ul>
           </div>
           <div className="title-sidenav mt-2">
@@ -892,7 +912,7 @@ function MainSection() {
           <div className="product-tabs mt-4 mb-4">
             <ul className="nav nav-tabs">
               <li className="nav-item">
-                <button 
+                <button
                   className={`nav-link ${!categoryFilter ? 'active' : ''}`}
                   onClick={() => {
                     setCategoryFilter(null);
@@ -903,7 +923,47 @@ function MainSection() {
                 </button>
               </li>
               <li className="nav-item">
-                <button 
+                <button
+                  className={`nav-link ${categoryFilter === 'men' || categoryFilter === 'men' ? 'active' : ''}`}
+                  onClick={() => changeCategoryFilter('men')}
+                >
+                  مردانه
+                </button>
+              </li>
+              <li className="nav-item">
+                <button
+                  className={`nav-link ${categoryFilter === 'women' || categoryFilter === 'women' ? 'active' : ''}`}
+                  onClick={() => changeCategoryFilter('women')}
+                >
+                  زنانه
+                </button>
+              </li>
+              <li className="nav-item">
+                <button
+                  className={`nav-link ${categoryFilter === 'boys' || categoryFilter === 'boys' ? 'active' : ''}`}
+                  onClick={() => changeCategoryFilter('boys')}
+                >
+                  پسرانه
+                </button>
+              </li>
+              <li className="nav-item">
+                <button
+                  className={`nav-link ${categoryFilter === 'girls' || categoryFilter === 'girls' ? 'active' : ''}`}
+                  onClick={() => changeCategoryFilter('girls')}
+                >
+                  دخترانه
+                </button>
+              </li>
+              <li className="nav-item">
+                <button
+                  className={`nav-link ${categoryFilter === 'children' || categoryFilter === 'children' ? 'active' : ''}`}
+                  onClick={() => changeCategoryFilter('children')}
+                >
+                  پوشاک کودک
+                </button>
+              </li>
+              <li className="nav-item">
+                <button
                   className={`nav-link ${categoryFilter === 'watch' ? 'active' : ''}`}
                   onClick={() => changeCategoryFilter('watch')}
                 >
@@ -911,11 +971,43 @@ function MainSection() {
                 </button>
               </li>
               <li className="nav-item">
-                <button 
+                <button
                   className={`nav-link ${categoryFilter === 'shoes' || categoryFilter === 'shoes' ? 'active' : ''}`}
                   onClick={() => changeCategoryFilter('shoes')}
                 >
                   کفش ها
+                </button>
+              </li>
+              <li className="nav-item">
+                <button
+                  className={`nav-link ${categoryFilter === 'work' || categoryFilter === 'work' ? 'active' : ''}`}
+                  onClick={() => changeCategoryFilter('work')}
+                >
+                  لباس کار
+                </button>
+              </li>
+              <li className="nav-item">
+                <button
+                  className={`nav-link ${categoryFilter === 'accessory' || categoryFilter === 'accessory' ? 'active' : ''}`}
+                  onClick={() => changeCategoryFilter('accessory')}
+                >
+                  اکسسوری ها
+                </button>
+              </li>
+              <li className="nav-item">
+                <button
+                  className={`nav-link ${categoryFilter === 'trip' || categoryFilter === 'trip' ? 'active' : ''}`}
+                  onClick={() => changeCategoryFilter('trip')}
+                >
+                  چمدان و وسایل سفر
+                </button>
+              </li>
+              <li className="nav-item">
+                <button
+                  className={`nav-link ${categoryFilter === 'sport' || categoryFilter === 'sport' ? 'active' : ''}`}
+                  onClick={() => changeCategoryFilter('sport')}
+                >
+                  پوشاک ورزشی
                 </button>
               </li>
             </ul>
