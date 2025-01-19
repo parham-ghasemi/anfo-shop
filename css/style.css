@@ -2804,7 +2804,7 @@ label span.pink {
   font-size: 1.563rem;
   color: #fff;
   position: relative;
-  padding-bottom: 20px;
+  /* padding-bottom: 20px; */
 }
 
 .footer-main .footer-top h3::after {

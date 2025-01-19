@@ -1,621 +1,859 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="author" content="Ali Jazbi">
-        <meta http-equiv='cache-control' content='no-cache'>
-        <meta http-equiv='expires' content='0'>
-        <meta http-equiv='pragma' content='no-cache'>
-        <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="./plugins/Bootstrap/css/bootstrap.rtl.min.css">
-        <!-- Slider Card -->
-        <link rel="stylesheet" href="./plugins/slider/dist/css/uikit.min.css" />
-        <!-- fade animation style -->
-        <link href="./plugins/aos/aos.css" rel="stylesheet">
-        <!-- Bootstrap Icon -->
-        <link rel="stylesheet" href="./plugins/Bootstrap/bootstrap-icons/bootstrap-icons.css">
-        <!-- customized Style -->
-        <link rel="stylesheet" href="./css/style.css">
-        <link rel="stylesheet" href="./css/menu-sm.css">
-        <link rel="stylesheet" href="./css/offcanvas-menu-md.css">
-        <title>Clothes Page</title>
-    </head>
-    <body id="top">
-
-        <!-- NOTE Preloader -->
-        <div id="preloader">
-            <div class='preloader'>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            </div>
-        </div>
-        <!-- NOTE Back To Top Button -->
-        <button
-        type="button"
-        class="btn btn-floating fixed-bottom"
-        id="btn-back-to-top">
-        <i class="bi bi-arrow-up"></i>
-        </button>
-        <!-- SECTION Navbar -->
-        <header class="main-head">
-          
-            <!-- SECTION navbar expand on mobile -->
-            <div id="navbar-sm" class="header fixed-top d-lg-none w-100 d-flex align-items-center justify-content-center flex-column">
-              <div style="height:3.525rem;" class="row w-100 d-flex justify-content-around align-items-center">
-                <div class="top-nav w-50 d-flex">
-                  <a class="navbar-brand">
-                    <button onclick="openNav()"> <i style="font-size:30px;color:black !important" class="bi bi-list"></i>
-                      <div id="closeBtn" class="d-none d-md-block" onclick="closeNav()">&times;</div>
-                    </button>
-                  </a>
-                  <a class="navbar-brand ps-3" href="./index.html">
-                    <img src="./images/amazon.svg" width="60" height="35">
-                  </a>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Ali Jazbi" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="./plugins/Bootstrap/css/bootstrap.rtl.min.css"
+    />
+    <!-- Slider Card -->
+    <link rel="stylesheet" href="./plugins/slider/dist/css/uikit.min.css" />
+    <!-- fade animation style -->
+    <link href="./plugins/aos/aos.css" rel="stylesheet" />
+    <!-- Bootstrap Icon -->
+    <link
+      rel="stylesheet"
+      href="./plugins/Bootstrap/bootstrap-icons/bootstrap-icons.css"
+    />
+    <!-- customized Style -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/menu-sm.css" />
+    <link rel="stylesheet" href="./css/offcanvas-menu-md.css" />
+    <title>Clothes Page</title>
+  </head>
+  <body id="top">
+    <!-- NOTE Preloader -->
+    <div id="preloader">
+      <div class="preloader">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <!-- NOTE Back To Top Button -->
+    <button
+      type="button"
+      class="btn btn-floating fixed-bottom"
+      id="btn-back-to-top"
+    >
+      <i class="bi bi-arrow-up"></i>
+    </button>
+    <!-- SECTION Navbar -->
+    <header class="main-head">
+      <!-- SECTION navbar expand on mobile -->
+      <div
+        id="navbar-sm"
+        class="header fixed-top d-lg-none w-100 d-flex align-items-center justify-content-center flex-column"
+      >
+        <div
+          style="height: 3.525rem"
+          class="row w-100 d-flex justify-content-around align-items-center"
+        >
+          <div class="top-nav w-50 d-flex">
+            <a class="navbar-brand">
+              <button onclick="openNav()">
+                <i
+                  style="font-size: 30px; color: black !important"
+                  class="bi bi-list"
+                ></i>
+                <div
+                  id="closeBtn"
+                  class="d-none d-md-block"
+                  onclick="closeNav()"
+                >
+                  &times;
                 </div>
-                  <div class="top-nav w-50 text-end">
-                    <a class="navbar-brand pe-3" href="#">
-                      <i style="font-size:20px;" class="bi bi-person-circle"></i>
-                    </a>
-                    <a data-bs-toggle="modal" data-bs-target="#cartModal" class="navbar-brand" href="#">
-                      <i style="font-size:20px;" class="bi bi-cart-dash"></i>
-                    </a>
-                  </div>
-              </div>
-              
-              <form id="search-sm" class="form border mt-2">
-                <input class="input" placeholder="جست و جو ... " type="text">
-                <button class="reset" type="reset">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </button>
-                <button>
-                    <svg width="17" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="search">
-                        <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9" stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-                </button>
-              </form>
-              <div id="vertical-ul-sm" class="vertical-ul-sm">
-                  <ul>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">پیشنهاد ویژه<i class="bi bi-stars ms-1"></i></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">پرفروش ترین ها<i class="bi bi-bag-heart-fill ms-1"></i></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">تخفیفات روز<i class="bi bi-tags-fill ms-1"></i></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">خدمات مشتریان<i class="bi bi-person-heart ms-1"></i></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">اطلاعات کاربری<i class="bi bi-person-vcard-fill ms-1"></i></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">گیفت کارت<i class="bi bi-gift-fill ms-1"></i></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">خرید<i class="bi bi-bag-fill ms-1"></i></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">فروش<i class="bi bi-wallet-fill ms-1"></i></a>
-                    </li>
-                  </ul>
-                  <div class="city-sm">
-                    <li class="nav-item me-3">
-                      <a class="nav-link" href="#">انتخاب شهر<i class="bi bi-geo-alt-fill ms-1"></i>
-                      </a>
-                    </li>
-                  </div>
-              </div>
-            </div>
-              <!-- SECTION navbar expand on computer -->
-              <nav id="navbar" class="navbar navbar-expand-md d-none d-lg-block">
-                <div class="container pc-navbar">
-                    <a class="navbar-brand" href="./index.html">
-                        <figure><img src="./images/logo.svg" alt=""></figure>
-                    </a>
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav m-auto">
-                      <li class="nav-item li-style">
-                        <a class="nav-link active" aria-current="page" href="./index.html">خانه</a>
-                      </li>
-                      <li class="nav-item dropdown li-style">
-                        <a id="drop" class="nav-link dropdown-toggle" href="#">
-                          سیستم عامل
-                        </a>
-                        <div id="dropdown" class="dropdown-style">
-                          <div class="container w-100 mt-2">
-                            <div class="row d-flex justify-content-center">                              
-                                <div class="col">    
-                                  <ul>
-                                  <h5 class="h5">ویندوز</h5>
-                                  <hr>
-                                  <li><a href="#"><i class="bi bi-caret-left-fill"></i>ویندوز 11</a></li>
-                                  <li><a href="#"><i class="bi bi-caret-left-fill"></i>ویندوز 10</a></li>
-                                  <li><a href="#"><i class="bi bi-caret-left-fill"></i>ویندوز 8.1</a></li>
-                                  <li><a href="#"><i class="bi bi-caret-left-fill"></i>ویندوز 7</a></li>
-                                  <li><a href="#"><i class="bi bi-caret-left-fill"></i>ویندوز XP</a></li>
-                                  <li><a href="#"><i class="bi bi-caret-left-fill"></i>ویندوز Server</a></li>
-                                  </ul>
-                              </div>
-                                <div class="col">
-                                  <ul>
-                                  <h5 class="h5">سایر</h5>
-                                  <hr>
-                                  <li><a href="#"><i class="bi bi-caret-left-fill"></i>لینوکس</a></li>
-                                  <li><a href="#"><i class="bi bi-caret-left-fill"></i>مکینتاش</a></li>
-                                  <li><a href="#"><i class="bi bi-caret-left-fill"></i>اندروید</a></li>
-                                  </ul>
-                              </div>
-                                <div class="col">
-                                  <ul>
-                                  <h5 class="h5">سایر بخش ها</h5>
-                                  <hr>
-                                  <li><a href="#"><i class="bi bi-caret-left-fill"></i>مجازی سازی</a></li>
-                                  <li><a href="#"><i class="bi bi-caret-left-fill"></i>آپدیت ویندوز</a></li>
-                                  <li><a href="#"><i class="bi bi-caret-left-fill"></i>فعال ساز ویندوز</a></li>
-                                  </ul>
-                                </div>
-                                <div class="col">
-                                  <ul>
-                                    <h5 class="h5">مباحث انجمن</h5>
-                                    <hr>
-                                    <li><a href="#"><i class="bi bi-caret-left-fill"></i>مشکلات سیستم عامل ها</a></li>
-                                    <li><a href="#"><i class="bi bi-caret-left-fill"></i>آموزش های سیستم عامل ها</a></li>
-                                    </ul>
-                              </div>
+              </button>
+            </a>
+            <a class="navbar-brand ps-3" href="./index.html">
+              <img src="./images/amazon.svg" width="60" height="35" />
+            </a>
+          </div>
+          <div class="top-nav w-50 text-end">
+            <a class="navbar-brand pe-3" href="#">
+              <i style="font-size: 20px" class="bi bi-person-circle"></i>
+            </a>
+            <a
+              data-bs-toggle="modal"
+              data-bs-target="#cartModal"
+              class="navbar-brand"
+              href="#"
+            >
+              <i style="font-size: 20px" class="bi bi-cart-dash"></i>
+            </a>
+          </div>
+        </div>
 
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="nav-item li-style">
-                        <a  style="color:#4A9FB7 !important" class="nav-link" href="#">پوشاک</a>
-                      </li>
-                      <li class="nav-item li-style">
-                        <a onclick="show1()" class="nav-link" href="#">درباره ما</a>
-                      </li>
-                      <li class="nav-item li-style">
-                        <a onclick="show2()" class="nav-link" href="#">ارتباط با ما</a>
-                      </li>
-                    </ul>
-                    <form id="form-overlay" class="form border">
-                      <div class="pe-1">
-                        <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        </a>
-                        
-                        <ul id="drop-search" class="dropdown-menu">
-                          <li><a class="dropdown-item" onclick="overlay()">آیتم</a></li>
-                          <li><a class="dropdown-item" onclick="overlay()">آیتم</a></li>
-                          <li><a class="dropdown-item" onclick="overlay()">آیتم</a></li>
-                          <li><a class="dropdown-item" onclick="overlay()">آیتم</a></li>
-                          <li><a class="dropdown-item" onclick="overlay()">آیتم</a></li>
-                          <li><a class="dropdown-item" onclick="overlay()">آیتم</a></li>
-                          <li><a class="dropdown-item" onclick="overlay()">آیتم</a></li>
-                          <li><a class="dropdown-item" onclick="overlay()">آیتم</a></li>
-                          <li><a class="dropdown-item" onclick="overlay()">آیتم</a></li>
-                          <li><a class="dropdown-item" onclick="overlay()">آیتم</a></li>
-                          <li><a class="dropdown-item" onclick="overlay()">آیتم</a></li>
-                          <li><a class="dropdown-item" onclick="overlay()">آیتم</a></li>
-                          <li><a class="dropdown-item" onclick="overlay()">آیتم</a></li>
-                          <li><a class="dropdown-item" onclick="overlay()">آیتم</a></li>
+        <form id="search-sm" class="form border mt-2">
+          <input class="input" placeholder="جست و جو ... " type="text" />
+          <button class="reset" type="reset">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+          <button>
+            <svg
+              width="17"
+              height="18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-labelledby="search"
+            >
+              <path
+                d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9"
+                stroke="currentColor"
+                stroke-width="1.333"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </button>
+        </form>
+        <div id="vertical-ul-sm" class="vertical-ul-sm">
+          <ul>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                >پیشنهاد ویژه<i class="bi bi-stars ms-1"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                >پرفروش ترین ها<i class="bi bi-bag-heart-fill ms-1"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                >تخفیفات روز<i class="bi bi-tags-fill ms-1"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                >خدمات مشتریان<i class="bi bi-person-heart ms-1"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                >اطلاعات کاربری<i class="bi bi-person-vcard-fill ms-1"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                >گیفت کارت<i class="bi bi-gift-fill ms-1"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                >خرید<i class="bi bi-bag-fill ms-1"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                >فروش<i class="bi bi-wallet-fill ms-1"></i
+              ></a>
+            </li>
+          </ul>
+          <div class="city-sm">
+            <li class="nav-item me-3">
+              <a class="nav-link" href="#"
+                >انتخاب شهر<i class="bi bi-geo-alt-fill ms-1"></i>
+              </a>
+            </li>
+          </div>
+        </div>
+      </div>
+      <!-- SECTION navbar expand on computer -->
+      <nav id="navbar" class="navbar navbar-expand-md d-none d-lg-block">
+        <div class="container pc-navbar">
+          <a class="navbar-brand" href="./index.html">
+            <figure><img src="./images/logo.svg" alt="" /></figure>
+          </a>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto">
+              <li class="nav-item li-style">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./index.html"
+                  >خانه</a
+                >
+              </li>
+              <li class="nav-item dropdown li-style">
+                <a id="drop" class="nav-link dropdown-toggle" href="#">
+                  سیستم عامل
+                </a>
+                <div id="dropdown" class="dropdown-style">
+                  <div class="container w-100 mt-2">
+                    <div class="row d-flex justify-content-center">
+                      <div class="col">
+                        <ul>
+                          <h5 class="h5">ویندوز</h5>
+                          <hr />
+                          <li>
+                            <a href="#"
+                              ><i class="bi bi-caret-left-fill"></i>ویندوز 11</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#"
+                              ><i class="bi bi-caret-left-fill"></i>ویندوز 10</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#"
+                              ><i class="bi bi-caret-left-fill"></i>ویندوز
+                              8.1</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#"
+                              ><i class="bi bi-caret-left-fill"></i>ویندوز 7</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#"
+                              ><i class="bi bi-caret-left-fill"></i>ویندوز XP</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#"
+                              ><i class="bi bi-caret-left-fill"></i>ویندوز
+                              Server</a
+                            >
+                          </li>
                         </ul>
                       </div>
-                        <input id="inOver" class="input" placeholder="جست و جو ... " required="" type="text">
-                        <button class="reset" type="reset">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
-                            </svg>
-                        </button>
-                        <button>
-                            <svg width="17" height="23" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="search">
-                                <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9" stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                        </button>
-                    </form>
+                      <div class="col">
+                        <ul>
+                          <h5 class="h5">سایر</h5>
+                          <hr />
+                          <li>
+                            <a href="#"
+                              ><i class="bi bi-caret-left-fill"></i>لینوکس</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#"
+                              ><i class="bi bi-caret-left-fill"></i>مکینتاش</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#"
+                              ><i class="bi bi-caret-left-fill"></i>اندروید</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <ul>
+                          <h5 class="h5">سایر بخش ها</h5>
+                          <hr />
+                          <li>
+                            <a href="#"
+                              ><i class="bi bi-caret-left-fill"></i>مجازی
+                              سازی</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#"
+                              ><i class="bi bi-caret-left-fill"></i>آپدیت
+                              ویندوز</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#"
+                              ><i class="bi bi-caret-left-fill"></i>فعال ساز
+                              ویندوز</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col">
+                        <ul>
+                          <h5 class="h5">مباحث انجمن</h5>
+                          <hr />
+                          <li>
+                            <a href="#"
+                              ><i class="bi bi-caret-left-fill"></i>مشکلات سیستم
+                              عامل ها</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#"
+                              ><i class="bi bi-caret-left-fill"></i>آموزش های
+                              سیستم عامل ها</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                </div>
-              </nav>
-                      <div id="overlay-menu" onclick="overlayOFF()"></div>
-                      
-              <!-- SECTION  offcanvas navbar on computer-->
-              <div  style="margin-top:76px" class="navbar-md-bottom d-none d-md-flex align-items-center">
-                <div class="container-fluid w-100 d-flex justify-content-between">
-                <ul class="nav ms-3">
-                  <li class="nav-item d-flex me-2">
-                    <button onclick="openNav()"><i class="bi bi-list"></i></button>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">پیشنهاد ویژه<i class="bi bi-stars ms-1"></i></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">خدمات مشتریان<i class="bi bi-person-heart ms-1"></i></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">گیفت کارت<i class="bi bi-gift-fill ms-1"></i></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">فروش<i class="bi bi-wallet-fill ms-1"></i></a>
-                  </li>
-                  <li class="nav-item">
-                    <a data-bs-toggle="modal" data-bs-target="#cartModal" class="nav-link" href="#">سبد خرید<i class="bi bi-bag-fill ms-1"></i></a>
-                  </li>
+              </li>
+              <li class="nav-item li-style">
+                <a style="color: #4a9fb7 !important" class="nav-link" href="#"
+                  >پوشاک</a
+                >
+              </li>
+              <li class="nav-item li-style">
+                <a onclick="show1()" class="nav-link" href="#">درباره ما</a>
+              </li>
+              <li class="nav-item li-style">
+                <a onclick="show2()" class="nav-link" href="#">ارتباط با ما</a>
+              </li>
+            </ul>
+            <form id="form-overlay" class="form border">
+              <div class="pe-1">
+                <a
+                  class="dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                </a>
+
+                <ul id="drop-search" class="dropdown-menu">
+                  <li><a class="dropdown-item" onclick="overlay()">آیتم</a></li>
+                  <li><a class="dropdown-item" onclick="overlay()">آیتم</a></li>
+                  <li><a class="dropdown-item" onclick="overlay()">آیتم</a></li>
+                  <li><a class="dropdown-item" onclick="overlay()">آیتم</a></li>
+                  <li><a class="dropdown-item" onclick="overlay()">آیتم</a></li>
+                  <li><a class="dropdown-item" onclick="overlay()">آیتم</a></li>
+                  <li><a class="dropdown-item" onclick="overlay()">آیتم</a></li>
+                  <li><a class="dropdown-item" onclick="overlay()">آیتم</a></li>
+                  <li><a class="dropdown-item" onclick="overlay()">آیتم</a></li>
+                  <li><a class="dropdown-item" onclick="overlay()">آیتم</a></li>
+                  <li><a class="dropdown-item" onclick="overlay()">آیتم</a></li>
+                  <li><a class="dropdown-item" onclick="overlay()">آیتم</a></li>
+                  <li><a class="dropdown-item" onclick="overlay()">آیتم</a></li>
+                  <li><a class="dropdown-item" onclick="overlay()">آیتم</a></li>
                 </ul>
-                <li class="nav-item me-3">
-                  <a class="nav-link" href="#">انتخاب شهر<i class="bi bi-geo-alt-fill ms-1"></i></a>
-                </li>
               </div>
+              <input
+                id="inOver"
+                class="input"
+                placeholder="جست و جو ... "
+                required=""
+                type="text"
+              />
+              <button class="reset" type="reset">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  ></path>
+                </svg>
+              </button>
+              <button>
+                <svg
+                  width="17"
+                  height="23"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  role="img"
+                  aria-labelledby="search"
+                >
+                  <path
+                    d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9"
+                    stroke="currentColor"
+                    stroke-width="1.333"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div id="overlay-menu" onclick="overlayOFF()"></div>
+
+      <!-- SECTION  offcanvas navbar on computer-->
+      <div
+        style="margin-top: 76px"
+        class="navbar-md-bottom d-none d-md-flex align-items-center"
+      >
+        <div class="container-fluid w-100 d-flex justify-content-between">
+          <ul class="nav ms-3">
+            <li class="nav-item d-flex me-2">
+              <button onclick="openNav()"><i class="bi bi-list"></i></button>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                >پیشنهاد ویژه<i class="bi bi-stars ms-1"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                >خدمات مشتریان<i class="bi bi-person-heart ms-1"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                >گیفت کارت<i class="bi bi-gift-fill ms-1"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                >فروش<i class="bi bi-wallet-fill ms-1"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a
+                data-bs-toggle="modal"
+                data-bs-target="#cartModal"
+                class="nav-link"
+                href="#"
+                >سبد خرید<i class="bi bi-bag-fill ms-1"></i
+              ></a>
+            </li>
+          </ul>
+          <li class="nav-item me-3">
+            <a class="nav-link" href="#"
+              >انتخاب شهر<i class="bi bi-geo-alt-fill ms-1"></i
+            ></a>
+          </li>
+        </div>
+      </div>
+      <div class="offcanvas-menu w-100">
+        <div id="overlay" onclick="closeNav()"></div>
+        <div class="sidenav" id="mySidenav">
+          <div class="sidenavHeader d-flex justify-content-between w-100">
+            <i class="fas fa-user-circle me-2"
+              ><span style="font-family: homa !important" Class="ps-2"
+                >ورود</span
+              ></i
+            >
+            <i
+              style="cursor: pointer"
+              onclick="closeNav()"
+              class="bi bi-x-lg"
+            ></i>
+          </div>
+          <!--Below SideNavHeader-->
+          <div id="main-container">
+            <div class="sidenavContentHeader">Trending</div>
+            <a href="#"><div class="sidenavContent">Best Sellers</div></a>
+            <a href="#"><div class="sidenavContent">New Releases</div></a>
+            <a href="#"><div class="sidenavContent">Movers and Shakers</div></a>
+            <hr />
+            <div class="sidenavContentHeader">Digital Content And Devices</div>
+            <a href="#" onclick="openPrimeVideo()"
+              ><div class="sidenavRow">
+                <div>Prime Video</div>
+                <i class="fas fa-chevron-left" style="color: #8e9090"></i></div
+            ></a>
+            <a href="#" onclick="openAmazonMusic()"
+              ><div class="sidenavRow">
+                <div>Amazon Music</div>
+                <i class="fas fa-chevron-left" style="color: #8e9090"></i></div
+            ></a>
+            <a href="#"
+              ><div class="sidenavRow">
+                <div>Apps for Android</div>
+                <i class="fas fa-chevron-left" style="color: #8e9090"></i></div
+            ></a>
+            <a href="#"
+              ><div class="sidenavRow">
+                <div>Echo, Alexa & Smart Home</div>
+                <i class="fas fa-chevron-left" style="color: #8e9090"></i></div
+            ></a>
+            <a href="#"
+              ><div class="sidenavRow">
+                <div>Fire TV</div>
+                <i class="fas fa-chevron-left" style="color: #8e9090"></i></div
+            ></a>
+            <a href="#"
+              ><div class="sidenavRow">
+                <div>Fire Tablets</div>
+                <i class="fas fa-chevron-left" style="color: #8e9090"></i></div
+            ></a>
+            <a href="#"
+              ><div class="sidenavRow">
+                <div>Kindle E-readers & Books</div>
+                <i class="fas fa-chevron-left" style="color: #8e9090"></i></div
+            ></a>
+            <a href="#"
+              ><div class="sidenavRow">
+                <div>Audible Audiobooks</div>
+                <i class="fas fa-chevron-left" style="color: #8e9090"></i></div
+            ></a>
+            <hr />
+            <div class="sidenavContentHeader">Shop By Department</div>
+            <a href="#"
+              ><div class="sidenavRow">
+                <div>Amazon Fresh</div>
+                <i class="fas fa-chevron-left" style="color: #8e9090"></i></div
+            ></a>
+            <a href="#">
+              <div class="sidenavRow">
+                <div>Books</div>
+                <i class="fas fa-chevron-left" style="color: #8e9090"></i>
               </div>
-              <div class="offcanvas-menu w-100">
-                <div id="overlay" onclick="closeNav()"></div>
-                <div class="sidenav" id="mySidenav">
-                  <div class="sidenavHeader d-flex justify-content-between w-100">
-                    <i class="fas fa-user-circle me-2"><span style="font-family:homa !important;
-                      " Class="ps-2">ورود</span></i>
-                    <i style="cursor:pointer" onclick="closeNav()" class="bi bi-x-lg"></i>
-                  </div>
-                  <!--Below SideNavHeader-->
-                  <div id="main-container">
-                    <div class="sidenavContentHeader">Trending</div>
-                    <a href="#"><div class="sidenavContent">Best Sellers</div></a>
-                    <a href="#"><div class="sidenavContent">New Releases</div></a>
-                    <a href="#"><div class="sidenavContent">Movers and Shakers</div></a>
-                    <hr />
-                    <div class="sidenavContentHeader">Digital Content And Devices</div>
-                    <a href="#" onclick="openPrimeVideo()"
-                      ><div class="sidenavRow">
-                        <div>Prime Video</div>
-                        <i class="fas fa-chevron-left" style="color: #8e9090"></i></div
-                    ></a>
-                    <a href="#" onclick="openAmazonMusic()"
-                      ><div class="sidenavRow">
-                        <div>Amazon Music</div>
-                        <i class="fas fa-chevron-left" style="color: #8e9090"></i></div
-                    ></a>
-                    <a href="#"
-                      ><div class="sidenavRow">
-                        <div>Apps for Android</div>
-                        <i class="fas fa-chevron-left" style="color: #8e9090"></i></div
-                    ></a>
-                    <a href="#"
-                      ><div class="sidenavRow">
-                        <div>Echo, Alexa & Smart Home</div>
-                        <i class="fas fa-chevron-left" style="color: #8e9090"></i></div
-                    ></a>
-                    <a href="#"
-                      ><div class="sidenavRow">
-                        <div>Fire TV</div>
-                        <i class="fas fa-chevron-left" style="color: #8e9090"></i></div
-                    ></a>
-                    <a href="#"
-                      ><div class="sidenavRow">
-                        <div>Fire Tablets</div>
-                        <i class="fas fa-chevron-left" style="color: #8e9090"></i></div
-                    ></a>
-                    <a href="#"
-                      ><div class="sidenavRow">
-                        <div>Kindle E-readers & Books</div>
-                        <i class="fas fa-chevron-left" style="color: #8e9090"></i></div
-                    ></a>
-                    <a href="#"
-                      ><div class="sidenavRow">
-                        <div>Audible Audiobooks</div>
-                        <i class="fas fa-chevron-left" style="color: #8e9090"></i></div
-                    ></a>
-                    <hr />
-                    <div class="sidenavContentHeader">Shop By Department</div>
-                    <a href="#"
-                      ><div class="sidenavRow">
-                        <div>Amazon Fresh</div>
-                        <i class="fas fa-chevron-left" style="color: #8e9090"></i></div
-                    ></a>
-                    <a href="#">
-                      <div class="sidenavRow">
-                        <div>Books</div>
-                        <i class="fas fa-chevron-left" style="color: #8e9090"></i>
-                      </div>
-                    </a>
-                    <a href="#">
-                      <div class="sidenavRow">
-                        <div>Films, TV, Music & Games</div>
-                        <i class="fas fa-chevron-left" style="color: #8e9090"></i>
-                      </div>
-                    </a>
-                    <a href="#">
-                      <div class="sidenavRow">
-                        <div>Electronics & Computers</div>
-                        <i class="fas fa-chevron-left" style="color: #8e9090"></i>
-                      </div>
-                    </a>
-                    <div class="sidenavContainer" id="firstContainer">
-                      <hr />
-                      <a href="#">
-                        <div class="sidenavRow">
-                          <div>Home, Garden, Pets & DIY</div>
-                          <i class="fas fa-chevron-left" style="color: #8e9090"></i>
-                        </div>
-                      </a>
-                      <a href="#">
-                        <div class="sidenavRow">
-                          <div>Toys, Children & Baby</div>
-                          <i class="fas fa-chevron-left" style="color: #8e9090"></i>
-                        </div>
-                      </a>
-                      <a href="#">
-                        <div class="sidenavRow">
-                          <div>Clothes, Shoes, Jewellery & Accessories</div>
-                          <i class="fas fa-chevron-left" style="color: #8e9090"></i>
-                        </div>
-                      </a>
-                      <a href="#">
-                        <div class="sidenavRow">
-                          <div>Sports & Outdoors</div>
-                          <i class="fas fa-chevron-left" style="color: #8e9090"></i>
-                        </div>
-                      </a>
-                      <a href="#">
-                        <div class="sidenavRow">
-                          <div>Food & Grocery</div>
-                          <i class="fas fa-chevron-left" style="color: #8e9090"></i>
-                        </div>
-                      </a>
-                      <a href="#">
-                        <div class="sidenavRow">
-                          <div>Health & Beauty</div>
-                          <i class="fas fa-chevron-left" style="color: #8e9090"></i>
-                        </div>
-                      </a>
-                      <a href="#">
-                        <div class="sidenavRow">
-                          <div>Car & Motorbike</div>
-                          <i class="fas fa-chevron-left" style="color: #8e9090"></i>
-                        </div>
-                      </a>
-                      <a href="#">
-                        <div class="sidenavRow">
-                          <div>Business, Industry & Science</div>
-                          <i class="fas fa-chevron-left" style="color: #8e9090"></i>
-                        </div>
-                      </a>
-                    </div>
-                    <div
-                      class="sidenavRowDropdown"
-                      id="firstDropDown"
-                      onclick="firstDropDown()"
-                    >
-                      <div>See All</div>
-                      <i
-                        class="fas fa-chevron-down"
-                        style="color: #8e9090; margin-left: 10px"
-                      >
-                      </i>
-                    </div>
-                    <hr />
-                    <div class="sidenavContentHeader">Programs & Features</div>
-                    <a href="#">
-                      <div class="sidenavRow">
-                        <div>Gift Cards & Top Up</div>
-                        <i class="fas fa-chevron-left" style="color: #8e9090"></i>
-                      </div>
-                    </a>
-                    <a href="#">
-                      <div class="sidenavRow">
-                        <div>Find a Gift</div>
-                        <i class="fas fa-chevron-left" style="color: #8e9090"></i>
-                      </div>
-                    </a>
-                    <a href="#">
-                      <div class="sidenavRow">
-                        <div>Handmade</div>
-                        <i class="fas fa-chevron-left" style="color: #8e9090"></i>
-                      </div>
-                    </a>
-                    <a href="#">
-                      <div class="sidenavRow">
-                        <div>Amazon Launchpad</div>
-                        <i class="fas fa-chevron-left" style="color: #8e9090"></i>
-                      </div>
-                    </a>
-                    <!--Beginning of second sidenavContainer-->
-                    <div class="sidenavContainer" id="secondContainer">
-                      <hr />
-                      <a href="#">
-                        <div class="sidenavContent">Made In Italy</div>
-                      </a>
-                      <a href="#">
-                        <div class="sidenavRow">
-                          <div>Home Services</div>
-                          <i class="fas fa-chevron-left" style="color: #8e9090"></i>
-                        </div>
-                      </a>
-                      <a href="#">
-                        <div class="sidenavContent">Prime Wardrobe</div>
-                      </a>
-                      <a href="#">
-                        <div class="sidenavRow">
-                          <div>Amazon Business</div>
-                          <i class="fas fa-chevron-left" style="color: #8e9090"></i>
-                        </div>
-                      </a>
-                      <a href="#">
-                        <div class="sidenavContent">Amazon Second Chance</div>
-                      </a>
-                    </div>
-                    <div
-                      class="sidenavRowDropdown"
-                      id="secondDropDown"
-                      onclick="secondDropDown()"
-                    >
-                      <div>See All</div>
-                      <i
-                        class="fas fa-chevron-down"
-                        style="color: #8e9090; margin-left: 10px"
-                      >
-                      </i>
-                    </div>
-                    <hr />
-                    <div class="sidenavContentHeader">Help & Settings</div>
-                    <a href="#"><div class="sidenavContent">Your Account</div></a>
-                    <a href="#"><div class="sidenavContent">Currency Settings</div></a>
-                    <a href="#"><div class="sidenavContent">Customer Service</div></a>
-                    <a href="#"><div class="sidenavContent">Sign In</div></a>
-                    <div style="height: 50px"></div>
-                  </div>
-                  <!--End of first container-->
-            
-                  <div id="sub-container">
-                    <div id="mainMenu">
-                      <i class="fas fa-chevron-left" style="color: #8e9090"></i> MAIN MENU
-                    </div>
-                    <hr />
-                    <div id="sub-container-content">
-                      <!-- <div class="sidenavContentHeader">Prime Video</div>
+            </a>
+            <a href="#">
+              <div class="sidenavRow">
+                <div>Films, TV, Music & Games</div>
+                <i class="fas fa-chevron-left" style="color: #8e9090"></i>
+              </div>
+            </a>
+            <a href="#">
+              <div class="sidenavRow">
+                <div>Electronics & Computers</div>
+                <i class="fas fa-chevron-left" style="color: #8e9090"></i>
+              </div>
+            </a>
+            <div class="sidenavContainer" id="firstContainer">
+              <hr />
+              <a href="#">
+                <div class="sidenavRow">
+                  <div>Home, Garden, Pets & DIY</div>
+                  <i class="fas fa-chevron-left" style="color: #8e9090"></i>
+                </div>
+              </a>
+              <a href="#">
+                <div class="sidenavRow">
+                  <div>Toys, Children & Baby</div>
+                  <i class="fas fa-chevron-left" style="color: #8e9090"></i>
+                </div>
+              </a>
+              <a href="#">
+                <div class="sidenavRow">
+                  <div>Clothes, Shoes, Jewellery & Accessories</div>
+                  <i class="fas fa-chevron-left" style="color: #8e9090"></i>
+                </div>
+              </a>
+              <a href="#">
+                <div class="sidenavRow">
+                  <div>Sports & Outdoors</div>
+                  <i class="fas fa-chevron-left" style="color: #8e9090"></i>
+                </div>
+              </a>
+              <a href="#">
+                <div class="sidenavRow">
+                  <div>Food & Grocery</div>
+                  <i class="fas fa-chevron-left" style="color: #8e9090"></i>
+                </div>
+              </a>
+              <a href="#">
+                <div class="sidenavRow">
+                  <div>Health & Beauty</div>
+                  <i class="fas fa-chevron-left" style="color: #8e9090"></i>
+                </div>
+              </a>
+              <a href="#">
+                <div class="sidenavRow">
+                  <div>Car & Motorbike</div>
+                  <i class="fas fa-chevron-left" style="color: #8e9090"></i>
+                </div>
+              </a>
+              <a href="#">
+                <div class="sidenavRow">
+                  <div>Business, Industry & Science</div>
+                  <i class="fas fa-chevron-left" style="color: #8e9090"></i>
+                </div>
+              </a>
+            </div>
+            <div
+              class="sidenavRowDropdown"
+              id="firstDropDown"
+              onclick="firstDropDown()"
+            >
+              <div>See All</div>
+              <i
+                class="fas fa-chevron-down"
+                style="color: #8e9090; margin-left: 10px"
+              >
+              </i>
+            </div>
+            <hr />
+            <div class="sidenavContentHeader">Programs & Features</div>
+            <a href="#">
+              <div class="sidenavRow">
+                <div>Gift Cards & Top Up</div>
+                <i class="fas fa-chevron-left" style="color: #8e9090"></i>
+              </div>
+            </a>
+            <a href="#">
+              <div class="sidenavRow">
+                <div>Find a Gift</div>
+                <i class="fas fa-chevron-left" style="color: #8e9090"></i>
+              </div>
+            </a>
+            <a href="#">
+              <div class="sidenavRow">
+                <div>Handmade</div>
+                <i class="fas fa-chevron-left" style="color: #8e9090"></i>
+              </div>
+            </a>
+            <a href="#">
+              <div class="sidenavRow">
+                <div>Amazon Launchpad</div>
+                <i class="fas fa-chevron-left" style="color: #8e9090"></i>
+              </div>
+            </a>
+            <!--Beginning of second sidenavContainer-->
+            <div class="sidenavContainer" id="secondContainer">
+              <hr />
+              <a href="#">
+                <div class="sidenavContent">Made In Italy</div>
+              </a>
+              <a href="#">
+                <div class="sidenavRow">
+                  <div>Home Services</div>
+                  <i class="fas fa-chevron-left" style="color: #8e9090"></i>
+                </div>
+              </a>
+              <a href="#">
+                <div class="sidenavContent">Prime Wardrobe</div>
+              </a>
+              <a href="#">
+                <div class="sidenavRow">
+                  <div>Amazon Business</div>
+                  <i class="fas fa-chevron-left" style="color: #8e9090"></i>
+                </div>
+              </a>
+              <a href="#">
+                <div class="sidenavContent">Amazon Second Chance</div>
+              </a>
+            </div>
+            <div
+              class="sidenavRowDropdown"
+              id="secondDropDown"
+              onclick="secondDropDown()"
+            >
+              <div>See All</div>
+              <i
+                class="fas fa-chevron-down"
+                style="color: #8e9090; margin-left: 10px"
+              >
+              </i>
+            </div>
+            <hr />
+            <div class="sidenavContentHeader">Help & Settings</div>
+            <a href="#"><div class="sidenavContent">Your Account</div></a>
+            <a href="#"><div class="sidenavContent">Currency Settings</div></a>
+            <a href="#"><div class="sidenavContent">Customer Service</div></a>
+            <a href="#"><div class="sidenavContent">Sign In</div></a>
+            <div style="height: 50px"></div>
+          </div>
+          <!--End of first container-->
+
+          <div id="sub-container">
+            <div id="mainMenu">
+              <i class="fas fa-chevron-left" style="color: #8e9090"></i> MAIN
+              MENU
+            </div>
+            <hr />
+            <div id="sub-container-content">
+              <!-- <div class="sidenavContentHeader">Prime Video</div>
                       <a href="#"><div class="sidenavContent">All Videos</div></a> -->
-                    </div>
-                  </div>
-                </div>
-              </div>
-        </header>
-         <div class="main-shopping-cart">
-          <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header border-bottom-0">
-                  <h5 class="modal-title">
-                    سبد خرید شما
-                  </h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <table class="table table-image">
-                    <thead>
-                      <tr>
-                        <th scope="col"></th>
-                        <th scope="col">محصول</th>
-                        <th scope="col">قیمت</th>
-                        <th scope="col">مقدار</th>
-                        <th scope="col">جمع</th>
-                        <th scope="col">اقدام</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td class="w-25">
-                          <img src="./images/singleProduct/vans.png" class="img-fluid img-thumbnail" alt="Sheep">
-                        </td>
-                        <td>Vans Sk8-Hi MTE</td>
-                        <td>89$</td>
-                        <td class="qty"><input type="text" class="form-control" id="input1" value="2"></td>
-                        <td>178$</td>
-                        <td>
-                          <a href="#" class="btn btn-danger btn-sm">
-                            <i class="fa fa-times"></i>
-                          </a>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table> 
-                  <div class="d-flex justify-content-end">
-                    <h4>جمع: <span class="price text-success">89$</span></h4>
-                  </div>
-                </div>
-                <div class="modal-footer border-top-0 d-flex justify-content-between">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">بستن</button>
-                  <button type="button" class="btn btn-success">تسویه حساب</button>
-                </div>
-              </div>
             </div>
           </div>
         </div>
-        <div id="overlay-menu" onclick="overlayOFF()"></div>
-        <div class="d-flex w-100 justify-content-center">
-          <div class="popup" id="popup1">
-            <span><i onclick="hide1()" class="bi bi-x-circle"></i>
-            </span>
-            
-            <div class="row w-100 h-100">
-              <div class="col w-100">
-                <h2>برندی متفاوت</h2>
-                <p>
-                  ماموریت ما ارائه طیف وسیعی از برنامه های کاربردی تجاری آسان است که مجموعه کاملی از ابزارها را برای هر نیاز تجاری تشکیل می دهند. ما به میلیون‌ها شرکت امکان دسترسی آسان به نرم‌افزاری را می‌دهیم که برای اجرا و گسترش کسب‌ و کارشان نیاز دارند.
-                </p>
-                <p>
-                  در اینجا در Amazon ما 30 برنامه اصلی را توسعه داده ایم که به طور مرتب ارتقا می یابند. علاوه بر این، جامعه ما با بیش از 1500 عضو فعال، به بیش از 16000 برنامه کمک کرده است تا طیف گسترده ای از نیازهای تجاری را پوشش دهد.
-                </p>
-                <div style="margin-top:86px">
-                  <a href="#"><i class="bi bi-instagram"></i></a>
-                  <a href="#"><i class="bi bi-whatsapp"></i></a>
-                  <a href="#"><i class="bi bi-linkedin"></i></a>
-                  <a href="#"><i class="bi bi-facebook"></i></a>         
-                </div>
-              </div>
-              <div class="col w-100">
-                <img class="w-100 h-auto rounded" src="./images/team.webp" alt="">
+      </div>
+    </header>
+    <div class="main-shopping-cart">
+      <div
+        class="modal fade"
+        id="cartModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div
+          class="modal-dialog modal-lg modal-dialog-centered"
+          role="document"
+        >
+          <div class="modal-content">
+            <div class="modal-header border-bottom-0">
+              <h5 class="modal-title">سبد خرید شما</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <table class="table table-image">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col">محصول</th>
+                    <th scope="col">قیمت</th>
+                    <th scope="col">مقدار</th>
+                    <th scope="col">جمع</th>
+                    <th scope="col">اقدام</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="w-25">
+                      <img
+                        src="./images/singleProduct/vans.png"
+                        class="img-fluid img-thumbnail"
+                        alt="Sheep"
+                      />
+                    </td>
+                    <td>Vans Sk8-Hi MTE</td>
+                    <td>89$</td>
+                    <td class="qty">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="input1"
+                        value="2"
+                      />
+                    </td>
+                    <td>178$</td>
+                    <td>
+                      <a href="#" class="btn btn-danger btn-sm">
+                        <i class="fa fa-times"></i>
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="d-flex justify-content-end">
+                <h4>جمع: <span class="price text-success">89$</span></h4>
               </div>
             </div>
-  
-          </div>
-          <div class="popup" id="popup2">
-            <span><i onclick="hide2()" class="bi bi-x-circle"></i>
-            </span>
-            
-            <div class="row w-100 h-100">
-              <div class="col w-100">
-                <h2>با ما در ارتباط باشید</h2>
-                <form action="#">
-                  <label style="width:49%" class="d-inline-block">
-                    <input type="text" placeholder="نام"/>
-                  </label>
-                  <label style="width:49%" class="d-inline-block">
-                    <input type="text" placeholder="نام خانوادگی"/>
-                  </label>
-                  <label>
-                    <input type="email" placeholder="...ایمیل"/>
-                  </label>
-                  <label>
-                    <textarea placeholder="پیام ..." class="mBox"></textarea>
-                  </label>
-                  <button class="red" type="button">ارسال<i class="bi bi-send-fill"></i></button>
-                </form>
-              </div>
-              <div class="col w-100">
-                <script src="./plugins/playerGIF/player.js"></script>
-                <lottie-player 
-                src="./gif/Work frome Home Mailing F 2.json" speed="1"  style="width:100%; height: 400px;margin-top: -40px"  loop autoplay></lottie-player>
-                <div style="margin-top:-10px">
-                  <a href="#"><i class="bi bi-telephone-fill"></i></a>         
-                  <a href="#"><i class="bi bi-chat-left-dots-fill"></i></a>
-                  <a href="#"><i class="bi bi-geo-alt-fill"></i></a>
-                  <a href="#"><i class="bi bi-envelope-at-fill"></i></a>
-
-                </div>
-              </div>
+            <div
+              class="modal-footer border-top-0 d-flex justify-content-between"
+            >
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                بستن
+              </button>
+              <button type="button" class="btn btn-success">تسویه حساب</button>
             </div>
-  
           </div>
+        </div>
+      </div>
+    </div>
+    <div id="overlay-menu" onclick="overlayOFF()"></div>
+    <div class="d-flex w-100 justify-content-center">
+      <div class="popup" id="popup1">
+        <span><i onclick="hide1()" class="bi bi-x-circle"></i> </span>
+
+        <div class="row w-100 h-100">
+          <div class="col w-100">
+            <h2>برندی متفاوت</h2>
+            <p>
+              ماموریت ما ارائه طیف وسیعی از برنامه های کاربردی تجاری آسان است که
+              مجموعه کاملی از ابزارها را برای هر نیاز تجاری تشکیل می دهند. ما به
+              میلیون‌ها شرکت امکان دسترسی آسان به نرم‌افزاری را می‌دهیم که برای
+              اجرا و گسترش کسب‌ و کارشان نیاز دارند.
+            </p>
+            <p>
+              در اینجا در Amazon ما 30 برنامه اصلی را توسعه داده ایم که به طور
+              مرتب ارتقا می یابند. علاوه بر این، جامعه ما با بیش از 1500 عضو
+              فعال، به بیش از 16000 برنامه کمک کرده است تا طیف گسترده ای از
+              نیازهای تجاری را پوشش دهد.
+            </p>
+            <div style="margin-top: 86px">
+              <a href="#"><i class="bi bi-instagram"></i></a>
+              <a href="#"><i class="bi bi-whatsapp"></i></a>
+              <a href="#"><i class="bi bi-linkedin"></i></a>
+              <a href="#"><i class="bi bi-facebook"></i></a>
+            </div>
           </div>
-        <!-- SECTION main section -->
+          <div class="col w-100">
+            <img class="w-100 h-auto rounded" src="./images/team.webp" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="popup" id="popup2">
+        <span><i onclick="hide2()" class="bi bi-x-circle"></i> </span>
 
-        <div id="main-clothes"></div>
+        <div class="row w-100 h-100">
+          <div class="col w-100">
+            <h2>با ما در ارتباط باشید</h2>
+            <form action="#">
+              <label style="width: 49%" class="d-inline-block">
+                <input type="text" placeholder="نام" />
+              </label>
+              <label style="width: 49%" class="d-inline-block">
+                <input type="text" placeholder="نام خانوادگی" />
+              </label>
+              <label>
+                <input type="email" placeholder="...ایمیل" />
+              </label>
+              <label>
+                <textarea placeholder="پیام ..." class="mBox"></textarea>
+              </label>
+              <button class="red" type="button">
+                ارسال<i class="bi bi-send-fill"></i>
+              </button>
+            </form>
+          </div>
+          <div class="col w-100">
+            <script src="./plugins/playerGIF/player.js"></script>
+            <lottie-player
+              src="./gif/Work frome Home Mailing F 2.json"
+              speed="1"
+              style="width: 100%; height: 400px; margin-top: -40px"
+              loop
+              autoplay
+            ></lottie-player>
+            <div style="margin-top: -10px">
+              <a href="#"><i class="bi bi-telephone-fill"></i></a>
+              <a href="#"><i class="bi bi-chat-left-dots-fill"></i></a>
+              <a href="#"><i class="bi bi-geo-alt-fill"></i></a>
+              <a href="#"><i class="bi bi-envelope-at-fill"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- SECTION main section -->
 
-        <!-- <section class="main-clothes mt-3">
+    <div id="main-clothes"></div>
+
+    <!-- <section class="main-clothes mt-3">
           <div class="row w-100">
               <div class="col-lg-2 sideMenu d-none d-lg-block ps-4"> -->
-                    <!-- <div class="title-sidenav depetment">
+    <!-- <div class="title-sidenav depetment">
                       <h5>دپارتمان</h5>
                       <a href="#"><i class="bi bi-chevron-right"></i>همه دپارتمان ها</a>
                     </div> -->
-                    <!-- <div class="title-sidenav mt-2 ps-3 category__nav">
+    <!-- <div class="title-sidenav mt-2 ps-3 category__nav">
                       <h5>پوشاک</h5>
                       <ul class="clothes-type">
                         <li><a href="#" data-target="men">مردانه</a></li>
@@ -1299,173 +1537,169 @@
               </div>
         </section> -->
 
-
-
-
-
-
-        <!-- SECTION Footer -->
-        <footer class="footer-main">
-            <div class="footer-top">
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-3 col-6 mb-5 mb-md-0">
-                    <h3 class="text-capitalize">شرکت</h3>
-                    <ul>
-                      <li><a href="#">وبلاگ</a></li>
-                      <li><a rel="nofollow" href="#">حساب</a></li>
-                      <li><a href="#">درباره</a></li>
-                    </ul>
-                  </div>
-                  <div class="col-md-3 col-6 mb-5 mb-md-0">
-                    <h3 class=" text-capitalize">منابع</h3>
-                    <ul>
-                      <li><a href="#">باندل</a></li>
-                      <li><a rel="nofollow" href="#">قالب</a></li>
-                      <li><a href="#">قالب های پیشرفته</a></li>
-                    </ul>
-                  </div>
-                  <div class="col-md-3 col-6 mb-5 mb-md-0">
-                    <h3 class=" text-capitalize">پشتیبانی</h3>
-                    <ul>
-                      <li><a href="#">آموزش</a></li>
-                      <li><a rel="nofollow" href="#">سوالات متداول</a></li>
-                      <li><a href="#">دانلود و نصب</a></li>
-                      <li><a href="#">ارتباط با ما </a></li>
-                    </ul>
-                  </div>
-                  <div class="col-md-3 col-6 mb-5 mb-md-0">
-                    <h3 class=" text-capitalize">شرایط</h3>
-                    <ul>
-                      <li><a href="#">بازپرداخت</a></li>
-                      <li><a rel="nofollow" href="#">حریم خصوصی</a></li>
-                      <li><a href="#">مجوز</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+    <!-- SECTION Footer -->
+    <footer class="footer-main">
+      <!-- Top Section -->
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <!-- Customer Service -->
+            <div class="col-md-3 col-6 mb-5 mb-md-0">
+              <h3 class="text-capitalize">خدمات مشتری</h3>
+              <ul >
+                <li><a href="#">مرکز راهنما</a></li>
+                <li><a href="#">حساب کاربری</a></li>
+                <li><a href="#">سفارش‌های من</a></li>
+                <li><a href="#">پیگیری سفارش</a></li>
+                <li><a href="#">بازگشت و بازپرداخت</a></li>
+              </ul>
             </div>
-            <div class="footer-bottom">
-              <div class="container">
-                <span class="footer_footerLabel d-none d-md-block">ما را دنبال کنید</span>
-                <div class="row d-flex align-items-end">
-                    <div class="col-md-5 mb-5 mb-md-0 mt-2 d-none d-md-block">
-                        <div class="d-flex">
-                          <div class="me-3 me-md-4 me-lg-5">
-                            <a target="_blank" rel="noreferrer" href="#">
-                              <img alt="GethugoThemes" srcset="./images/logo2.svg" src="./images/logo2.svg" width="180" height="57"style="color:transparent">
-                            </a>
-                          </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-5 mb-md-0">
-                      <span>فضای مجازی</span>
-                      <ul class="mt-1 p-0 mb-0">
-                        <li class="me-4">
-                          <a target="_blank" rel="nofollow noreferrer" href="#">
-                            <i class="bi bi-facebook"></i>
-                          </a>
-                        </li>
-                        <li class="me-4">
-                          <a target="_blank" rel="nofollow noreferrer" href="#">
-                            <i class="bi bi-twitter"></i>
-                          </a>
-                        </li>
-                        <li class="me-4">
-                          <a target="_blank" rel="nofollow noreferrer" href="#">
-                            <i class="bi bi-dribbble"></i>
-                          </a>
-                        </li>
-                        <li class="me-4">
-                          <a target="_blank" rel="nofollow noreferrer" href="#">
-                            <i class="bi bi-pinterest"></i>
-                          </a>
-                        </li>
-                        <li class="me-4">
-                          <a target="_blank" rel="nofollow noreferrer" href="#">
-                            <i class="bi bi-github"></i>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="col-md-3">
-                      <div class="footer_copyrightText">
-                        <p class="text-start text-md-end mb-2">Copyright © 2022 Ali Jazbi</p>
-                      </div>
-                    </div>
-                </div>
-              </div>
+            <!-- About Us -->
+            <div class="col-md-3 col-6 mb-5 mb-md-0">
+              <h3 class="text-capitalize">درباره ما</h3>
+              <ul>
+                <li><a href="#">درباره شرکت</a></li>
+                <li><a href="#">فرصت‌های شغلی</a></li>
+                <li><a href="#">سرمایه‌گذاری</a></li>
+                <li><a href="#">اخبار و رسانه</a></li>
+                <li><a href="#">نقشه سایت</a></li>
+              </ul>
             </div>
-        </footer>
+            <!-- Shop Categories -->
+            <div class="col-md-3 col-6 mb-5 mb-md-0">
+              <h3 class="text-capitalize">دسته‌بندی‌ها</h3>
+              <ul>
+                <li><a href="#">کتاب‌ها</a></li>
+                <li><a href="#">الکترونیک</a></li>
+                <li><a href="#">مد و پوشاک</a></li>
+                <li><a href="#">خانه و آشپزخانه</a></li>
+                <li><a href="#">اسباب بازی‌ها</a></li>
+              </ul>
+            </div>
+            <!-- Policies -->
+            <div class="col-md-3 col-6 mb-5 mb-md-0">
+              <h3 class="text-capitalize">سیاست‌ها</h3>
+              <ul>
+                <li><a href="#">شرایط استفاده</a></li>
+                <li><a href="#">سیاست حفظ حریم خصوصی</a></li>
+                <li><a href="#">سیاست بازگشت</a></li>
+                <li><a href="#">سیاست فروشندگان</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <!-- Bottom Section -->
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="row d-flex align-items-center">
+            <!-- Logo -->
+            <div class="col-md-4 mb-5 mb-md-0 text-center text-md-start">
+              <a href="#">
+                <img
+                  src="./images/logo2.svg"
+                  alt="Logo"
+                  class="img-fluid"
+                  width="150"
+                />
+              </a>
+            </div>
+            <!-- Social Media -->
+            <div class="col-md-4 mb-5 mb-md-0 text-center">
+              <span>ما را در فضای مجازی دنبال کنید</span>
+              <ul class="mt-2 d-flex justify-content-center">
+                <li class="me-4">
+                  <a href="#"><i class="bi bi-facebook"></i></a>
+                </li>
+                <li class="me-4">
+                  <a href="#"><i class="bi bi-twitter"></i></a>
+                </li>
+                <li class="me-4">
+                  <a href="#"><i class="bi bi-instagram"></i></a>
+                </li>
+                <li class="me-4">
+                  <a href="#"><i class="bi bi-linkedin"></i></a>
+                </li>
+              </ul>
+            </div>
+            <!-- Copyright -->
+            <div class="col-md-4 text-center text-md-end">
+              <p class="mb-0">کلیه حقوق محفوظ است &copy; 2025 فروشگاه آنلاین</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="./plugins/Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Jquery Plugin -->
+    <script src="./plugins/jquery/jquery.min.js"></script>
+    <!-- Card Slider Plugin-->
+    <script src="./plugins/slider/dist/js/uikit.min.js"></script>
+    <script src="./plugins/slider/dist/js/uikit-icons.min.js"></script>
+    <!-- fade animation plugin -->
+    <script src="./node_modules/hero-slider/dist/HeroSlider.js"></script>
+    <script src="./plugins/aos/aos.js"></script>
+    <!-- FontAwesome -->
+    <script
+      src="./plugins/fontawesome/icon.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      AOS.init();
+    </script>
+    <!-- Back To Top & Progress BarScript -->
+    <script src="./plugins/OnScroll/script.js"></script>
+    <!-- main script -->
+    <script src="./js/script.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/typing.js"></script>
+    <script src="./js/md-menu-all.js"></script>
+    <script src="./js/card-slider.js"></script>
+    <script src="./js/filter.js"></script>
+    <script>
+      var menu = new MmenuLight(document.querySelector("#menu"), "all");
+      var navigator = menu.navigation({
+        // selectedClass: 'Selected',
+        // slidingSubmenus: true,
+        // theme: 'dark',
+        // title: 'Menu'
+      });
 
+      var drawer = menu.offcanvas({
+        // position: 'left'
+      });
+      //	Open the menu.
+      document
+        .querySelector('a[href="#menu"]')
+        .addEventListener("click", (evnt) => {
+          evnt.preventDefault();
+          drawer.open();
+        });
+      function closenav() {
+        drawer.close();
+      }
+    </script>
 
+    <!-- react -->
+    <script
+      src="https://unpkg.com/react@18/umd/react.production.min.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
 
+    <!-- Import main section component -->
+    <script type="text/babel" src="./js/main-section.js"></script>
 
-
-
-
-        <!-- Bootstrap Bundle with Popper -->
-        <script src="./plugins/Bootstrap/js/bootstrap.bundle.min.js"></script>
-        <!-- Jquery Plugin -->
-        <script src="./plugins/jquery/jquery.min.js"></script>
-        <!-- Card Slider Plugin-->
-        <script src="./plugins/slider/dist/js/uikit.min.js"></script>
-        <script src="./plugins/slider/dist/js/uikit-icons.min.js"></script>
-        <!-- fade animation plugin -->
-        <script src="./node_modules/hero-slider/dist/HeroSlider.js"></script>
-        <script src="./plugins/aos/aos.js"></script>
-        <!-- FontAwesome -->
-        <script src="./plugins/fontawesome/icon.js" crossorigin="anonymous"></script>
-        <script>
-          AOS.init();
-        </script>
-        <!-- Back To Top & Progress BarScript -->
-        <script src="./plugins/OnScroll/script.js"></script>
-        <!-- main script -->
-        <script src="./js/script.js"></script>
-        <script src="./js/menu.js"></script>
-        <script src="./js/typing.js"></script>
-        <script src="./js/md-menu-all.js"></script>
-        <script src="./js/card-slider.js"></script>
-        <script src="./js/filter.js"></script>
-        <script>
-          var menu = new MmenuLight(document.querySelector("#menu"), "all");
-            var navigator = menu.navigation({
-                // selectedClass: 'Selected',
-                // slidingSubmenus: true,
-                // theme: 'dark',
-                // title: 'Menu'
-            });
-
-            var drawer = menu.offcanvas({
-                // position: 'left'
-            });
-            //	Open the menu.
-            document
-                .querySelector('a[href="#menu"]')
-                .addEventListener("click", (evnt) => {
-                    evnt.preventDefault();
-                    drawer.open();
-                });
-                function closenav(){
-                  drawer.close()
-                }
-        </script>
-
-        <!-- react -->
-        <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
-        <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
-        <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
-
-        <!-- Import main section component -->
-        <script type="text/babel" src="./js/main-section.js"></script>
-      
-        <!--render the main section component -->
-        <script type="text/babel">
-          ReactDOM.render(<MainSection />, document.getElementById('main-clothes'));
-        </script>
-         
-    </body>
+    <!--render the main section component -->
+    <script type="text/babel">
+      ReactDOM.render(<MainSection />, document.getElementById("main-clothes"));
+    </script>
+  </body>
 </html>

@@ -249,7 +249,7 @@ const allProducts = [
     name: "Men's Striped Shirt",
     category: "Men",
     image: "./images/clothes/card16.jpg",
-    rating: 4,
+    rating: 1,
     brand: "Calvin Klein",
     releaseDate: "2025-01-01", // 7 days ago
     size: "0-3",
@@ -265,7 +265,7 @@ const allProducts = [
     name: "Nike Men's Sneakers",
     category: "Women, Sneaker, shoes",
     image: "./images/clothes/card17.jpg",
-    rating: 5,
+    rating: 2,
     brand: "Gucci",
     releaseDate: "2024-11-23", // 46 days ago
     size: "9-15",
@@ -297,7 +297,7 @@ const allProducts = [
     name: "Dr. Marten's Boot",
     category: "Men, Sneaker, shoes",
     image: "./images/clothes/card19.jpg",
-    rating: 5,
+    rating: 1,
     brand: "Gucci",
     releaseDate: "2024-11-23", // 46 days ago
     size: "9-15",
@@ -313,7 +313,7 @@ const allProducts = [
     name: "Watch",
     category: "Men, Watch",
     image: "./images/clothes/card20.jpg",
-    rating: 4,
+    rating: 3,
     brand: "Ralph Lauren",
     releaseDate: "2024-09-15", // Over 90 days ago
     size: "0-3",
@@ -329,7 +329,7 @@ const allProducts = [
     name: "Watch",
     category: "Watch",
     image: "./images/clothes/card21.jpg",
-    rating: 4,
+    rating: 1,
     brand: "Ralph Lauren",
     releaseDate: "2024-09-15", // Over 90 days ago
     size: "0-3",
@@ -345,7 +345,7 @@ const allProducts = [
     name: "Watch",
     category: "Watch",
     image: "./images/clothes/card22.jpg",
-    rating: 4,
+    rating: 2,
     brand: "Ralph Lauren",
     releaseDate: "2024-09-15", // Over 90 days ago
     size: "0-3",
@@ -399,6 +399,7 @@ function MainSection() {
   }
 
   function changeRatingFilter(rating) {
+    setFilteredProducts(allProducts)
     setRatingFilter(rating);
   }
   function filterByRating() {
