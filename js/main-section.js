@@ -279,7 +279,7 @@ const allProducts = [
     discountedPrice: null,
     badge: null,
     name: "Dr. Marten's Boot",
-    category: "Women, Sneaker, shoes",
+    category: "Men, Sneaker, shoes",
     image: "./images/clothes/card18.jpg",
     rating: 5,
     brand: "Gucci",
@@ -288,6 +288,70 @@ const allProducts = [
     availableColors: ["teal", "red"],
     seller: "Bloomingdale",
     availability: true
+  },
+  {
+    id: 19,
+    price: 85.00,
+    discountedPrice: null,
+    badge: null,
+    name: "Dr. Marten's Boot",
+    category: "Men, Sneaker, shoes",
+    image: "./images/clothes/card19.jpg",
+    rating: 5,
+    brand: "Gucci",
+    releaseDate: "2024-11-23", // 46 days ago
+    size: "9-15",
+    availableColors: ["teal", "red"],
+    seller: "Bloomingdale",
+    availability: true
+  },
+  {
+    id: 20,
+    price: 40.00,
+    discountedPrice: null,
+    badge: null,
+    name: "Watch",
+    category: "Men, Watch",
+    image: "./images/clothes/card20.jpg",
+    rating: 4,
+    brand: "Ralph Lauren",
+    releaseDate: "2024-09-15", // Over 90 days ago
+    size: "0-3",
+    availableColors: ["orange", "red"],
+    seller: "Zara",
+    availability: false
+  },
+  {
+    id: 21,
+    price: 40.00,
+    discountedPrice: null,
+    badge: null,
+    name: "Watch",
+    category: "Watch",
+    image: "./images/clothes/card21.jpg",
+    rating: 4,
+    brand: "Ralph Lauren",
+    releaseDate: "2024-09-15", // Over 90 days ago
+    size: "0-3",
+    availableColors: ["orange", "red"],
+    seller: "Zara",
+    availability: false
+  },
+  {
+    id: 22,
+    price: 40.00,
+    discountedPrice: null,
+    badge: null,
+    name: "Watch",
+    category: "Watch",
+    image: "./images/clothes/card22.jpg",
+    rating: 4,
+    brand: "Ralph Lauren",
+    releaseDate: "2024-09-15", // Over 90 days ago
+    size: "0-3",
+    availableColors: ["orange", "red"],
+    seller: "Zara",
+    availability: false
   },
 ];
 
@@ -518,7 +582,7 @@ function MainSection() {
               </li>
             </ul>
           </div> */}
-          <div className="title-sidenav mt-2">
+          <div className="title-sidenav mt-3">
             <h5>برند</h5>
             <form className="brand-filter-container">
               <div>
@@ -697,7 +761,7 @@ function MainSection() {
               </div>
             </ul>
           </div>
-          <div className="title-sidenav mt-2">
+          <div className="title-sidenav mt-3">
             <h5>کالا های جدید</h5>
             <ul>
               <li onClick={() => ChangeReleaseDateFilter(30)}>
@@ -708,7 +772,7 @@ function MainSection() {
               </li>
             </ul>
           </div>
-          <div className="title-sidenav mt-2">
+          <div className="title-sidenav mt-3">
             <h5>سایز</h5>
             <ul>
               <li className="d-inline-block" onClick={() => changeSizeFilter("freesize")}>
@@ -749,7 +813,7 @@ function MainSection() {
             </ul>
             <div className="col-12 col-lg-9"></div>
           </div>
-          <div className="title-sidenav colorPicker mt-2">
+          <div className="title-sidenav colorPicker mt-3">
             <h5>رنگ بندی</h5>
             <input type="radio" name="color" id="red" defaultValue="red" onClick={() => changeColorFilter("red")} />
             <label htmlFor="red">
@@ -793,7 +857,7 @@ function MainSection() {
               <span className="pink" />
             </label>
           </div>
-          <div className="title-sidenav mt-2">
+          <div className="title-sidenav mt-3">
             <h5>فروشنده ها</h5>
             <form>
               <input
@@ -878,7 +942,7 @@ function MainSection() {
               <label htmlFor="checkbox21">Saks Fifth Avenue</label>
             </form>
           </div>
-          <div className="title-sidenav mt-2">
+          <div className="title-sidenav mt-3">
             <h5>موجودی</h5>
             <form>
               <input
@@ -891,7 +955,7 @@ function MainSection() {
               <label htmlFor="checkbox22">موجود در انبار</label>
             </form>
           </div>
-          <div className="title-sidenav mt-2">
+          <div className="title-sidenav mt-3">
             <h5>پاک کردن فیلتر ها</h5>
             <button type="button" className="sidebar-clear-btn" onClick={clearAllFilters}>
               پاک کردن
